@@ -64,5 +64,26 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aidora is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Aidora was an AI-native leave-of-absence management platform for HR teams, founded in 2023 in San
+Francisco by Rhiana Gademsky and Anant Agarwal. It automated the regulated leave lifecycle —
+eligibility across federal FMLA and state paid-family-and-medical-leave programs, compliance forms,
+documentation, return-to-work planning and payroll coordination — through a natural-language
+interaction model employees used by voice or text.
+
+**Aidora was acquired by Paylocity on 9 July 2026** and its absence-management capability is being
+folded into the Paylocity HR platform. `getaidora.com` now serves a single acquisition notice for
+every path.
+
+**Aidora never published a public API.** Full contract discovery was run on 2026-09-14 against the
+apex, `www`, the application host and the trust host — OpenAPI, Swagger, GraphQL introspection, MCP
+`tools/list`, A2A agent cards and the named `/.well-known/` path list — and every response was a
+catch-all page or a single-page-app shell. The archived first-party site had no developer section
+at all. Aidora was an API *consumer*: its integrations page advertised inbound HRIS connections
+(ADP, BambooHR, Gusto, Workday, UKG and roughly thirty-five more) and exposed nothing outward.
+
+Still live: the tenant login at `app.getaidora.com` and a first-party Vanta trust center at
+`trust.getaidora.com`.
+
+- Website: https://www.getaidora.com/
+- Trust center: https://trust.getaidora.com/
+- Acquisition press release: https://www.paylocity.com/company/about-us/newsroom/press-releases/paylocity-acquires-ai-native-aidora-to-simplify-leave-management/

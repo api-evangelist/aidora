@@ -1,0 +1,28 @@
+generated: '2026-09-14'
+method: probed
+source: >-
+  Contract discovery across getaidora.com, www.getaidora.com and app.getaidora.com, 2026-09-14
+note: >-
+  Not applicable rather than merely undocumented. Aidora never published a public API — no
+  developer portal, API reference, OpenAPI, GraphQL SDL, MCP server or webhook catalog exists on
+  any Aidora host, and none appears anywhere in the archived first-party site (its navigation ran
+  Product / Pricing / Resources / Integrations / Features, with no developer section). With no
+  public API there is no rate-limit surface to document and no response headers to observe.
+  Recorded as an honest zero, per the pipeline's rule that an absence is valid data.
+limit_count: 0
+rate_limits: []
+headers: []
+exhaustion_status_code: null
+applicable: false
+evidence:
+- url: https://www.getaidora.com/openapi.json
+  status: 200
+  result: soft-404, acquisition notice
+  checked: '2026-09-14'
+- url: https://app.getaidora.com/api/openapi.json
+  status: 200
+  result: SPA shell, not a spec
+  checked: '2026-09-14'
+- url: https://getaidora.com/.well-known/api-catalog
+  status: 404
+  checked: '2026-09-14'

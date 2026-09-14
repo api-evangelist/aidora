@@ -1,0 +1,188 @@
+generated: '2026-09-14'
+method: probed
+source: >-
+  Live GET of the named /.well-known/ path list plus contract-discovery paths against every host
+  this record knows: the registrable domain (getaidora.com), www, the application host
+  (app.getaidora.com) and the trust host (trust.getaidora.com). No API baseURL or OpenAPI
+  servers[] host exists for this provider.
+note: >-
+  NOTHING WAS FOUND. Every path on this domain answers with the SAME BODY as a deliberately
+  nonsense control path, so every 200 and every 404 here is a catch-all, not a document.
+  www.getaidora.com returns HTTP 200 with the 24,165-byte "Aidora is now part of Paylocity"
+  acquisition notice for every path including /definitely-not-a-real-path-zzq123 (verified by
+  md5: d714f52d338ce2cdc1b185cf0831c0eb on /, /about-us, /pricing, /security, /developers,
+  /openapi.json and the control). The apex getaidora.com returns a uniform 404 meta-refresh to
+  paylocity.com/404/. app.getaidora.com is a Next.js single-page app whose catch-all answers 200
+  with an HTML shell for every path (byte sizes differ only because the requested path is echoed
+  into the RSC payload). Per the pipeline's soft-404 rule these are MISSES, not documents, so NO
+  WellKnown and NO SecurityTxt pointer is emitted from this file.
+control_probe:
+  method: >-
+    A path that cannot exist was requested on each host first; any path whose body matches that
+    control is recorded as a soft 404.
+  hosts:
+  - host: www.getaidora.com
+    url: https://www.getaidora.com/definitely-not-a-real-path-zzq123
+    status: 200
+    body_md5: d714f52d338ce2cdc1b185cf0831c0eb
+  - host: getaidora.com
+    url: https://getaidora.com/definitely-not-a-real-path-zzq123
+    status: 404
+    body_md5: 7694872be0649186d2c870bd6b4c8928
+  - host: app.getaidora.com
+    url: https://app.getaidora.com/definitely-not-a-real-path-zzq123
+    status: 200
+    body_md5: e8087026505b5282afa5ffbf555f6181
+    note: SPA catch-all; body is an HTML shell on every path.
+hosts:
+- host: www.getaidora.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    soft_404: true
+    content_type: text/html
+    note: Acquisition-notice catch-all, not a document.
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/api-catalog
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/agent.json
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /llms.txt
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+- host: getaidora.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /llms.txt
+    status: 404
+    file: null
+- host: app.getaidora.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    soft_404: true
+    content_type: text/html
+    note: Next.js SPA shell on every path.
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/api-catalog
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/agent.json
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+  - path: /llms.txt
+    status: 200
+    soft_404: true
+    content_type: text/html
+    file: null
+contract_discovery:
+  note: >-
+    STEP 0b was run in full before concluding no contract exists. /openapi.json, /openapi.yaml,
+    /swagger.json, /v1/openapi.json, /api/openapi.json, /api-docs, /redoc, /graphql, /api/graphql
+    and /mcp were probed on all three hosts. Every response was the host's catch-all body; not one
+    parsed as OpenAPI, Swagger, a GraphQL response or an MCP JSON-RPC result. No agent card was
+    found on either the canonical or the legacy path.
+  openapi_found: false
+  graphql_found: false
+  mcp_found: false
+  agent_card_found: false
+  wsdl_found: false
+  grpc_found: false

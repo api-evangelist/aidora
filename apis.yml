@@ -1,8 +1,18 @@
 aid: aidora
 name: Aidora
-description: 'Aidora is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Aidora was an AI-native leave-of-absence management platform for HR teams, founded in 2023 in San
+  Francisco by Rhiana Gademsky and Anant Agarwal. The product automated the highly regulated leave
+  lifecycle — eligibility determination across federal FMLA plus state paid-family-and-medical-leave
+  programs, compliance forms, documentation, return-to-work planning and payroll coordination —
+  through a natural-language interaction model employees could use by voice or text. Aidora raised
+  roughly $2.7M in seed funding from Team Ignite Ventures and Fractal Software. On 9 July 2026
+  Paylocity acquired Aidora and folded its absence-management capabilities into the Paylocity HR
+  platform; getaidora.com is now a single acquisition notice and the company no longer operates an
+  independent product surface. Aidora never published a public developer portal, API reference or
+  machine-readable contract.
 url: https://raw.githubusercontent.com/api-evangelist/aidora/refs/heads/main/apis.yml
+image: https://app.getaidora.com/images/logo-aidora-paylocity.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +22,14 @@ created: '2026-09-14'
 modified: '2026-09-14'
 tags:
 - Company
+- Human Resources
+- Leave Management
+- Absence Management
+- HR Compliance
+- Workforce
+- Artificial Intelligence
+- SaaS
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +38,45 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.getaidora.com/
+- type: Login
+  url: https://app.getaidora.com/login
+- type: TrustCenter
+  url: https://trust.getaidora.com/
+- type: Compliance
+  url: security/aidora-trust-center.yml
+- type: DomainSecurity
+  url: security/aidora-domain-security.yml
+- type: Lifecycle
+  url: lifecycle/aidora-lifecycle.yml
+- type: LLMsTxt
+  url: llms/aidora-llms.txt
+- type: Plans
+  url: plans/aidora-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aidora-rate-limits.yml
+x-enrichment:
+  date: '2026-09-14'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Aidora was acquired by Paylocity on 2026-07-09 and getaidora.com is now a single holding page
+    that returns the same "Aidora is now part of Paylocity" notice for every path, including paths
+    that never existed; the former site, which never had a developer section in the first place, is
+    gone, and only the tenant login and the Vanta trust center still serve real content.
+  evidence:
+  - url: https://www.getaidora.com/
+    status: 200
+  - url: https://www.getaidora.com/definitely-not-a-real-path-zzq123
+    status: 200
+  - url: https://www.getaidora.com/openapi.json
+    status: 200
+  - url: https://getaidora.com/.well-known/api-catalog
+    status: 404
+  - url: https://trust.getaidora.com/
+    status: 200
+  checked: '2026-09-14'

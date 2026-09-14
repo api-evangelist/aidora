@@ -1,0 +1,26 @@
+generated: '2026-09-14'
+method: probed
+source: https://www.getaidora.com/pricing
+note: >-
+  Aidora published a /pricing page while it operated. It no longer exists: the URL returns HTTP 200
+  with the site-wide "Aidora is now part of Paylocity" acquisition notice, byte-identical to a
+  control path that never existed (md5 d714f52d338ce2cdc1b185cf0831c0eb), which is a soft 404. No
+  tier, price, quota or overage is published anywhere on an Aidora host today, and the archived
+  pricing page did not list public prices either — the motion was a "Book a Demo" sales gate with a
+  separate startup program. Recording an honest zero rather than omitting the file.
+plan_count: 0
+currency: null
+plans: []
+pricing_model: contact-sales
+evidence:
+- url: https://www.getaidora.com/pricing
+  status: 200
+  result: soft-404, acquisition notice
+  checked: '2026-09-14'
+- url: https://www.getaidora.com/startup-program
+  status: 200
+  result: soft-404, acquisition notice
+  checked: '2026-09-14'
+successor: >-
+  Pricing for the capability now lives with Paylocity, which also does not publish public list
+  prices. Not recorded as an Aidora plan.

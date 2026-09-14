@@ -1,0 +1,76 @@
+# Aidora
+
+> Aidora was an AI-native leave-of-absence management platform for HR teams. On 9 July 2026 it was
+> acquired by Paylocity and folded into the Paylocity HR platform. Aidora does not operate an
+> independent product today and never published a public API.
+
+generated: 2026-09-14
+method: generated
+source: API Evangelist catalog record all/aidora/apis.yml plus live probes of getaidora.com,
+  app.getaidora.com and trust.getaidora.com on 2026-09-14
+maintained-by: API Evangelist (https://apievangelist.com) — this is a third-party profile, not an
+  Aidora-published document.
+
+## Status
+
+Aidora is acquired and no longer independently operating. getaidora.com now serves a single
+acquisition notice for every path. If you are an agent trying to integrate with Aidora, stop here:
+there is no API, no developer portal, and no supported programmatic surface. The capability now
+lives inside Paylocity.
+
+- Acquirer: Paylocity — https://www.paylocity.com/
+- Announced: 2026-07-09
+- Press release: https://www.paylocity.com/company/about-us/newsroom/press-releases/paylocity-acquires-ai-native-aidora-to-simplify-leave-management/
+
+## What Aidora did
+
+Aidora automated the regulated leave-of-absence lifecycle for HR teams: eligibility determination
+across federal FMLA and state paid-family-and-medical-leave programs, compliance forms and
+documentation, return-to-work planning, and payroll coordination. Employees interacted with it
+through a natural-language model by voice or text. Founded 2023 in San Francisco by Rhiana
+Gademsky and Anant Agarwal; approximately $2.7M in seed funding from Team Ignite Ventures and
+Fractal Software.
+
+## API surface
+
+None. Verified 2026-09-14 by probing every host this record knows for OpenAPI, Swagger, GraphQL,
+MCP and A2A agent cards, plus the named /.well-known/ path list. Every response was a catch-all
+page or an SPA shell; nothing parsed as a machine-readable contract. See
+well-known/aidora-well-known.yml for the full probe log with status codes.
+
+Aidora was an API CONSUMER, not an API producer. Its integrations page advertised inbound HRIS
+connections — ADP Workforce Now, AlexisHR, Altera Payroll, BambooHR, Breathe, Ceridian Dayforce,
+Charlie, ChartHop, ClayHR, Factorial, Freshteam, Gusto, Hibob, HR Cloud, HR Partner, Humaans,
+IntelliHR, JumpCloud, Justworks, Kallidus, Lano, Lucca, Microsoft Entra ID, Namely, Nmbrs,
+Officient, Paychex, Paycor, Paylocity, PeopleHR, Personio, Proliant, Sage HR, Sesame, Square
+Payroll, TriNet, TriNet HR Platform, UKG Pro, UKG Pro Workforce Management, UKG Ready and Workday
+(archived list, 2026-04-15) — consumed to pull employee data in. It exposed nothing outward.
+
+## Still live
+
+- Customer login (existing tenants only): https://app.getaidora.com/login
+- Trust center (Vanta-hosted, first-party): https://trust.getaidora.com/
+
+## Compliance
+
+Aidora claimed SOC 2 Type II and used Vanta for continuous compliance monitoring. The claim was
+published on its own /security-standards page, which no longer exists; it is recorded here from the
+2026-04-15 archive snapshot and is not independently confirmed. Aidora explicitly analysed HIPAA
+and documented that it does not apply, because PHI excludes general HR data and employer-held FMLA
+medical information. Details: security/aidora-trust-center.yml.
+
+## Artifacts in this profile
+
+- apis.yml — the APIs.json record
+- lifecycle/aidora-lifecycle.yml — acquisition, surface state, timeline
+- security/aidora-domain-security.yml — probed TLS, HSTS, DNSSEC, SPF, DMARC
+- security/aidora-trust-center.yml — trust center and compliance posture
+- well-known/aidora-well-known.yml — full contract-discovery probe log
+- plans/aidora-plans-pricing.yml — no published plans
+- rate-limits/aidora-rate-limits.yml — not applicable, no API
+
+## Corrections
+
+This is an independent third-party profile. If anything here is wrong, open an issue on
+https://github.com/api-evangelist/aidora or email info@apievangelist.com. Corrections, re-scores
+and removal are free.

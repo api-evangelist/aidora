@@ -1,0 +1,87 @@
+generated: '2026-09-14'
+method: searched
+source: >-
+  https://www.getaidora.com/ (live acquisition notice) and
+  https://www.globenewswire.com/news-release/2026/07/09/3324813/0/en/paylocity-acquires-ai-native-aidora-to-simplify-leave-management.html
+note: >-
+  This records the lifecycle of the COMPANY AND PRODUCT, not of an API — Aidora never published
+  one. It exists because the single most important fact about this provider is that it no longer
+  operates independently, and because every link the catalog might otherwise carry for Aidora is
+  now dead.
+status: acquired
+operating: false
+acquisition:
+  acquirer: Paylocity
+  acquirer_url: https://www.paylocity.com/
+  announced: '2026-07-09'
+  terms: undisclosed
+  press_release: https://www.paylocity.com/company/about-us/newsroom/press-releases/paylocity-acquires-ai-native-aidora-to-simplify-leave-management/
+  press_release_mirror: https://www.globenewswire.com/news-release/2026/07/09/3324813/0/en/paylocity-acquires-ai-native-aidora-to-simplify-leave-management.html
+  disposition: >-
+    Aidora's AI-native absence-management capability is being folded into the Paylocity HR platform
+    rather than continuing as a standalone product.
+  quote: >-
+    "Aidora helps take that work off their plate by automating what has traditionally been manual,
+    and giving HR teams more confidence in how they manage leave." — Toby Williams, CEO, Paylocity.
+  financial_impact: >-
+    Paylocity stated it does not expect the acquisition to have a material impact on first-quarter
+    or fiscal 2027 results.
+surface_state:
+  checked: '2026-09-14'
+  marketing_site:
+    url: https://www.getaidora.com/
+    status: 200
+    state: holding-page
+    note: >-
+      Every path returns the same 24,165-byte acquisition notice, including paths that never
+      existed. The former site (/features, /pricing, /integrations, /blog, /about-us,
+      /security-standards, /terms-of-service, /privacy-policy, /startup-program, /announcements)
+      is gone.
+  application:
+    url: https://app.getaidora.com/login
+    status: 200
+    state: operating
+    note: >-
+      Customer login still resolves and is distinct from the SPA catch-all. The acquisition notice
+      states existing customers "will continue to receive the same support and service" during the
+      transition, so the tenant application is live but is not a public surface.
+  trust_center:
+    url: https://trust.getaidora.com/
+    status: 200
+    state: operating
+  non_production_hosts:
+    note: >-
+      demo., qa., staging., cbn., crp. and prf..getaidora.com all still resolve and serve the same
+      application build. uat-www.getaidora.com returns 401. emails.getaidora.com returns a
+      Cloudflare 525 (TLS handshake failure with origin). Discovered via certificate transparency,
+      recorded as infrastructure observation only.
+versioning:
+  scheme: null
+  note: No API, therefore no versioning policy.
+deprecation_policy:
+  published: false
+  sunset_header: false
+  note: >-
+    No RFC 8594 Sunset/Deprecation practice to record. The product end-of-life was communicated by
+    press release and a site-wide holding page, not by a deprecation policy.
+status_page:
+  published: false
+  note: No status page found on any Aidora host.
+sla:
+  published: false
+  note: >-
+    The only published SLA of any kind was a security-remediation SLA (high-priority findings in 3
+    business days) on the archived security-standards page; captured in security/aidora-trust-center.yml.
+timeline:
+- date: '2023'
+  event: Aidora founded in San Francisco by Rhiana Gademsky and Anant Agarwal.
+- date: '2026-04-15'
+  event: >-
+    Last archived snapshot of the full first-party site, including the security-standards and
+    HRIS integrations pages.
+- date: '2026-07-09'
+  event: Paylocity announces the acquisition of Aidora.
+- date: '2026-09-14'
+  event: >-
+    Probed by API Evangelist. getaidora.com serves only the acquisition notice; the tenant
+    application and the trust center remain live.

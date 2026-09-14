@@ -1,0 +1,80 @@
+generated: '2026-09-14'
+method: probed
+source: https://trust.getaidora.com/
+note: >-
+  Aidora runs a real, first-party trust center at trust.getaidora.com — a Vanta-hosted trust report
+  served from Aidora's own domain and branded "Aidora Trust Center". It is STILL LIVE (HTTP 200,
+  6,511 bytes) after the Paylocity acquisition, which makes it the only machine-addressable
+  compliance surface the company still serves. Its CONTENT, however, is not machine-readable: the
+  served HTML is a shell and the certification list loads client-side from a GraphQL endpoint that
+  requires a request signature (POST /graphql returns
+  {"errors":[{"message":"Missing `signature` or `signedAt`"}]}, HTTP 400). We did not attempt to
+  produce a signature. The certifications below are therefore recorded from Aidora's own published
+  security page, which is archived rather than live — see each entry's evidence.
+trust_center:
+  url: https://trust.getaidora.com/
+  first_party: true
+  host: trust.getaidora.com
+  platform: Vanta
+  title: Aidora Trust Center
+  status: 200
+  live: true
+  checked: '2026-09-14'
+  description: >-
+    "At Aidora, we take the responsibility of handling sensitive data seriously. Our team is
+    committed to building secure systems, protecting privacy, and staying aligned with evolving
+    compliance standards." — og:description served by trust.getaidora.com.
+  machine_readable: false
+  machine_readable_note: >-
+    Vanta trust report SPA. Certification data is behind a signed GraphQL call, so no crawler or
+    agent can read the posture this page exists to publish.
+certifications:
+- name: SOC 2 Type II
+  claimed: true
+  verified_live: false
+  evidence: https://web.archive.org/web/20260415000544/https://getaidora.com/security-standards
+  evidence_status: 200
+  evidence_kind: archived-first-party
+  quote: >-
+    "We are SOC 2 Type II compliant, ensuring that we have state of the art security measures in
+    place. The audit report can be accessed in our Trust Center."
+  note: >-
+    Aidora's own /security-standards page stated this. That page no longer exists — the live URL
+    now returns the acquisition-notice catch-all — so the claim is recorded from the 2026-04-15
+    archive snapshot and is NOT independently confirmed. The audit report itself was always gated
+    behind the trust center.
+- name: HIPAA
+  claimed: false
+  applicable: false
+  evidence: https://web.archive.org/web/20260415000544/https://getaidora.com/security-standards
+  evidence_status: 200
+  evidence_kind: archived-first-party
+  note: >-
+    Recorded because Aidora explicitly ANALYSED and DISCLAIMED it rather than ignoring it: the
+    company argued HIPAA does not apply, since PHI expressly excludes general HR data and
+    employer-held FMLA medical information. A deliberate, reasoned non-applicability, not a gap.
+compliance_program:
+  monitoring_vendor: Vanta
+  monitoring_frequency: hourly automated security and compliance checks
+  remediation_sla: high-priority findings resolved within 3 business days
+  evidence: https://web.archive.org/web/20260415000544/https://getaidora.com/security-standards
+  evidence_kind: archived-first-party
+security_practices:
+  note: >-
+    Captured from Aidora's archived first-party security overview. Included because it is the only
+    substantive technical disclosure the company ever published, and because the platform choices
+    explain the absence of an API surface.
+  encryption_at_rest: AES-256
+  encryption_in_transit: TLS
+  waf: Cloudflare
+  hosting: Vercel (application), Supabase (database)
+  backups: continuous, with Point-In-Time Recovery
+  authentication: magic links and OAuth with major providers such as Google
+  personnel: background checks, annual security training, centrally managed encrypted laptops
+  ci_security: automated dependency vulnerability scanning, static analysis, OSS license scanning
+  evidence: https://web.archive.org/web/20260415000544/https://getaidora.com/security-standards
+  evidence_kind: archived-first-party
+gaps:
+- No /.well-known/security.txt on any Aidora host (probed 2026-09-14; see well-known/aidora-well-known.yml).
+- No published vulnerability disclosure policy or bug bounty program found.
+- The live security-standards page was removed at acquisition; only the trust center survived.
