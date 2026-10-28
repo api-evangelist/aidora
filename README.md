@@ -64,26 +64,93 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aidora was an AI-native leave-of-absence management platform for HR teams, founded in 2023 in San
-Francisco by Rhiana Gademsky and Anant Agarwal. It automated the regulated leave lifecycle —
-eligibility across federal FMLA and state paid-family-and-medical-leave programs, compliance forms,
-documentation, return-to-work planning and payroll coordination — through a natural-language
-interaction model employees used by voice or text.
+Aidora was an AI-native leave-of-absence management platform for HR teams, founded in 2023 in San Francisco by Rhiana Gademsky and Anant Agarwal. The product automated the highly regulated leave lifecycle — eligibility determination across federal FMLA plus state paid-family-and-medical-leave programs, compliance forms, documentation, return-to-work planning and payroll coordination — through a natural-language interaction model employees could use by voice or text. Aidora raised roughly $2.7M in seed funding from Team Ignite Ventures and Fractal Software. On 9 July 2026 Paylocity acquired Aidora and folded its absence-management capabilities into the Paylocity HR platform; getaidora.com is now a single acquisition notice and the company no longer operates an independent product surface. Aidora never published a public developer portal, API reference or machine-readable contract.
 
-**Aidora was acquired by Paylocity on 9 July 2026** and its absence-management capability is being
-folded into the Paylocity HR platform. `getaidora.com` now serves a single acquisition notice for
-every path.
+**Areas:** Company · Human Resources · Leave Management · Absence Management · HR Compliance · Workforce · Artificial Intelligence · Software-as-a-Service · Acquired
 
-**Aidora never published a public API.** Full contract discovery was run on 2026-09-14 against the
-apex, `www`, the application host and the trust host — OpenAPI, Swagger, GraphQL introspection, MCP
-`tools/list`, A2A agent cards and the named `/.well-known/` path list — and every response was a
-catch-all page or a single-page-app shell. The archived first-party site had no developer section
-at all. Aidora was an API *consumer*: its integrations page advertised inbound HRIS connections
-(ADP, BambooHR, Gusto, Workday, UKG and roughly thirty-five more) and exposed nothing outward.
+## Aidora on APIs.io
 
-Still live: the tenant login at `app.getaidora.com` and a first-party Vanta trust center at
-`trust.getaidora.com`.
+Everything profiled for Aidora is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aidora/](https://apis.io/providers/aidora/)** — or go straight to one of the APIs or properties below.
 
-- Website: https://www.getaidora.com/
-- Trust center: https://trust.getaidora.com/
-- Acquisition press release: https://www.paylocity.com/company/about-us/newsroom/press-releases/paylocity-acquires-ai-native-aidora-to-simplify-leave-management/
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aidora Domain Security](https://apis.io/security/aidora/aidora-domain-security/)
+- [Aidora Trust Center](https://apis.io/security/aidora/aidora-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Aidora Plans Pricing](https://apis.io/plans/aidora/aidora-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Aidora Rate Limits](https://apis.io/rate-limits/aidora/aidora-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.getaidora.com/)
+- [Trust centre](https://trust.getaidora.com/)
+
+## API Evangelist rating
+
+**Kin Score 8.7** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 22.4 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.0** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aidora/](https://apis.io/providers/aidora/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Aidora: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aidora/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
